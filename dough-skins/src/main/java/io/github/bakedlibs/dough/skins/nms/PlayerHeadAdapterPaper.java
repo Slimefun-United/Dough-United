@@ -5,18 +5,26 @@ import com.destroystokyo.paper.profile.ProfileProperty;
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
 import io.github.bakedlibs.dough.reflection.ReflectionUtils;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import javax.annotation.ParametersAreNonnullByDefault;
+
+import io.github.bakedlibs.dough.skins.CustomGameProfile;
 import org.bukkit.Bukkit;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockState;
 import org.bukkit.block.Skull;
 
-import javax.annotation.ParametersAreNonnullByDefault;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-
-// Not currently in use.
-// This does not correctly update heads on updates currently.
 public class PlayerHeadAdapterPaper implements PlayerHeadAdapter {
+    private final Method getName;
+    private final Method getValue;
+    private final Method getSignature;
+
+    PlayerHeadAdapterPaper() {
+        getName = ReflectionUtils.getMethod(Property.class, "getName");
+        getValue = ReflectionUtils.getMethod(Property.class, "getValue");
+        getSignature = ReflectionUtils.getMethod(Property.class, "getSignature");
+    }
 
     @Override
     @ParametersAreNonnullByDefault
@@ -26,13 +34,9 @@ public class PlayerHeadAdapterPaper implements PlayerHeadAdapter {
 
         Skull skull = (Skull) state;
 
-        Property property = profile.getProperties().get("textures").iterator().next();
+        Property property = CustomGameProfile.getProperties(profile).get("textures").iterator().next();
 
-        PlayerProfile paperPlayerProfile = Bukkit.createProfile(profile.getId(), profile.getName());
-
-        Method getName = ReflectionUtils.getMethod(Property.class, "getName");
-        Method getValue = ReflectionUtils.getMethod(Property.class, "getValue");
-        Method getSignature = ReflectionUtils.getMethod(Property.class, "getSignature");
+        PlayerProfile paperPlayerProfile = Bukkit.createProfile(CustomGameProfile.getId(profile), CustomGameProfile.getName(profile));
 
         // Old authlib check
         if (getName != null && getValue != null && getSignature != null) {

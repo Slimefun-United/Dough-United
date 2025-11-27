@@ -25,6 +25,16 @@ It is packed to the brim with useful features and APIs to use and play around wi
 
 Dough may be more commonly known as the backbone of [Slimefun](https://github.com/Slimefun/Slimefun4).
 
+**Note that this project can be considered abandoned, because Slimefun has been discontinued**
+
+## :page_facing_up: Table of contents
+1. [Getting Started](#mag-getting-started)
+    - [Adding dough via gradle](#adding-dough-via-gradle)
+    - [Adding dough via Maven](#adding-dough-via-maven)
+2. [Features & Documentation](#sparkles-features-and-documentation)
+    - TODO
+3. [Discord server](#headphones-discord-server)
+
 ## :mag: Getting Started
 Dough is hosted on maven-central (OSS Sonatype) for easy access.
 Furthermore, it consists of multiple different submodules.
@@ -105,3 +115,17 @@ To shadow dough and relocate it:
   </plugins>
 </build>
 ```
+
+## :sparkles: Features and Documentation
+**TODO: Finish this section**
+
+## :headphones: Discord server
+You can also find us on discord by the way!
+If you need any help with dough or have a question regarding this project, feel free to join and connect with other members of the community.
+Note that this server is not as active at times, so response times may vary.
+
+<p align="center">
+  <a href="https://discord.gg/c8tk8rP8Wb">
+    <img src="https://discordapp.com/api/guilds/862336191839600650/widget.png?style=banner3" alt="Discord Invite"/>
+  </a>
+</p>
