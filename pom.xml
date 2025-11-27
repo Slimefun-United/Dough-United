@@ -36,20 +36,6 @@
         <url>https://github.com/baked-libs/dough/issues</url>
     </issueManagement>
 
-    <distributionManagement>
-        <repository>
-            <id>gugu-maven-repo</id>
-            <name>Gugu Maven Release Repository</name>
-            <url>https://maven.norain.city/releases</url>
-        </repository>
-
-        <snapshotRepository>
-            <id>gugu-maven-repo</id>
-            <name>Gugu Maven Snapshot Repository</name>
-            <url>https://maven.norain.city/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
-
     <licenses>
         <license>
             <name>MIT License</name>
