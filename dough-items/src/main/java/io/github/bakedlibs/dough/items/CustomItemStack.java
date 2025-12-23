@@ -15,6 +15,8 @@ import org.bukkit.inventory.meta.PotionMeta;
 /**
  * @deprecated This class exists only for backwards compatibility.
  * Use {@link ItemStackFactory} instead.
+ * Based on the implementation from commit {@code c191e24}:
+ * <a href="https://github.com/womzil/dough/commit/c191e24">View on GitHub</a>.
  */
 @Deprecated(forRemoval = false, since = "1.3.0")
 public class CustomItemStack extends ItemStack {

@@ -9,6 +9,12 @@ import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
 import java.util.function.Consumer;
 
+/**
+ * This class was named {@code CustomItemStack} in versions 1.3.x
+ * It has been renamed to avoid conflicts with the old API introduced in version 1.3.0 in commit {@code 7d5738e}:
+ * <a href="https://github.com/womzil/dough/commit/7d5738e">View on GitHub</a>.
+ */
+
 @ParametersAreNonnullByDefault
 public final class ItemStackFactory {
 
