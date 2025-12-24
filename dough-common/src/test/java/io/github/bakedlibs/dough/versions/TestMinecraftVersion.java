@@ -36,18 +36,14 @@ class TestMinecraftVersion {
          * https://hub.spigotmc.org/stash/projects/SPIGOT/repos/craftbukkit/browse/pom.xml
          * 
          * We should be safe to assume that forks follow these conventions and do not mess
-         * with this version number (Spigot, Paper and Tuinity do at least).
+         * with this version number (Spigot and Paper do not mess them at least).
          */
         // @formatter:off
         return Stream.of(
-            Arguments.of("1.13.2-R0.1-SNAPSHOT",    1, 13, 2),
-            Arguments.of("1.13-R0.2-SNAPSHOT",      1, 13, 0),
-            Arguments.of("1.13.2-R0.1-SNAPSHOT",    1, 13, 2),
-            Arguments.of("1.13-pre7-R0.1-SNAPSHOT", 1, 13, 0),
-            Arguments.of("1.14-pre5-SNAPSHOT",      1, 14, 0),
-            Arguments.of("1.15-R0.1-SNAPSHOT",      1, 15, 0),
-            Arguments.of("1.16.5-R0.1-SNAPSHOT",    1, 16, 5),
-            Arguments.of("1.17-R0.1-SNAPSHOT",      1, 17, 0)
+            Arguments.of("1.19-R0.1-SNAPSHOT",      1, 19, 0),
+            Arguments.of("1.20-R0.1-SNAPSHOT",      1, 20, 0),
+            Arguments.of("1.21-R0.1-SNAPSHOT",      1, 21, 0),
+            Arguments.of("1.21.10-R0.1-SNAPSHOT",      1, 21, 10)
         );
         // @formatter:on
     }

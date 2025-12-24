@@ -2,7 +2,7 @@ package io.github.bakedlibs.dough.versions;
 
 import javax.annotation.Nonnull;
 
-import org.apache.commons.lang.Validate;
+import org.apache.commons.lang3.Validate;
 
 /**
  * Abstract super class for numeric versions.

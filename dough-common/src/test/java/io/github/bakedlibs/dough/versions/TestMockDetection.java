@@ -7,7 +7,7 @@ import org.bukkit.Server;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-import be.seeseemelk.mockbukkit.MockBukkit;
+import org.mockbukkit.mockbukkit.MockBukkit;
 
 class TestMockDetection {
 

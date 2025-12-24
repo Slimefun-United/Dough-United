@@ -48,7 +48,7 @@ class TestSemanticVersion {
 
     @Test
     void testParsingIllegalValues() {
-        assertThrows(IllegalArgumentException.class, () -> SemanticVersion.parse(null));
+        assertThrows(NullPointerException.class, () -> SemanticVersion.parse(null));
         assertThrows(IllegalArgumentException.class, () -> SemanticVersion.parse("I am not a version"));
         assertThrows(IllegalArgumentException.class, () -> SemanticVersion.parse("1.almost.version.20.5"));
         assertThrows(IllegalArgumentException.class, () -> SemanticVersion.parse("1"));

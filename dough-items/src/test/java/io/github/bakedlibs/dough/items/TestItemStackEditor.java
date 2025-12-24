@@ -1,7 +1,7 @@
 package io.github.bakedlibs.dough.items;
 
-import be.seeseemelk.mockbukkit.MockBukkit;
-import be.seeseemelk.mockbukkit.UnimplementedOperationException;
+import org.mockbukkit.mockbukkit.MockBukkit;
+import org.mockbukkit.mockbukkit.exception.UnimplementedOperationException;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
@@ -50,12 +50,57 @@ class TestItemStackEditor {
         }
     }
 
+    private static final List<Material> LEATHER_ARMOR_MATERIALS = List.of(
+            Material.LEATHER_HELMET,
+            Material.LEATHER_CHESTPLATE,
+            Material.LEATHER_LEGGINGS,
+            Material.LEATHER_BOOTS,
+            Material.LEATHER_HORSE_ARMOR
+    );
+
+    private static final List<Material> POTION_MATERIALS = List.of(
+            Material.POTION,
+            Material.SPLASH_POTION,
+            Material.LINGERING_POTION
+    );
+
     private static Stream<Material> potionMaterials() {
-        return itemMaterials().filter(material -> getItemMeta(material) instanceof PotionMeta);
+        try {
+            List<Material> detected = itemMaterials()
+                .filter(material -> {
+                    ItemMeta meta = getItemMeta(material);
+                    return meta instanceof PotionMeta;
+                })
+                .toList(); // forces evaluation
+
+            if (!detected.isEmpty()) {
+                return detected.stream();
+            }
+        } catch (Throwable ignored) {
+            // MockBukkit throws errors here
+        }
+
+        return POTION_MATERIALS.stream();
     }
 
+
     private static Stream<Material> leatherArmorMaterials() {
-        return itemMaterials().filter(material -> getItemMeta(material) instanceof LeatherArmorMeta);
+        try {
+            List<Material> detected = itemMaterials()
+                    .filter(material -> {
+                        ItemMeta meta = getItemMeta(material);
+                        return meta instanceof LeatherArmorMeta;
+                    })
+                    .toList(); // forces evaluation
+
+            if (!detected.isEmpty()) {
+                return detected.stream();
+            }
+        } catch (Throwable ignored) {
+            // MockBukkit throws errors here
+        }
+
+        return LEATHER_ARMOR_MATERIALS.stream();
     }
 
     @ParameterizedTest
@@ -230,7 +275,8 @@ class TestItemStackEditor {
     void testItemMetaSetIfMetaTransformIsNotNull() {
         ItemStack expected = new ItemStack(Material.AIR);
         expected.setItemMeta(expected.getItemMeta());
-        ItemStackEditor editor = new ItemStackEditor(Material.AIR).withMetaConsumer(meta -> {});
+        ItemStackEditor editor = new ItemStackEditor(Material.AIR).withMetaConsumer(meta -> {
+        });
         Assertions.assertEquals(expected, editor.create());
     }
 

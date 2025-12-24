@@ -23,7 +23,7 @@ class TestPrefixedVersion {
 
     @Test
     void testInvalidConstructorArguments() {
-        assertThrows(IllegalArgumentException.class, () -> new PrefixedVersion(null, 1));
+        assertThrows(NullPointerException.class, () -> new PrefixedVersion(null, 1));
         assertThrows(IllegalArgumentException.class, () -> new PrefixedVersion("prefix", -10));
     }
 

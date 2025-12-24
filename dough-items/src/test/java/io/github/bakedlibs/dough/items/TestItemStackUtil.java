@@ -1,9 +1,9 @@
 package io.github.bakedlibs.dough.items;
 
-import be.seeseemelk.mockbukkit.MockBukkit;
-import be.seeseemelk.mockbukkit.inventory.meta.ItemMetaMock;
-import be.seeseemelk.mockbukkit.inventory.meta.LeatherArmorMetaMock;
-import be.seeseemelk.mockbukkit.inventory.meta.PotionMetaMock;
+import org.mockbukkit.mockbukkit.MockBukkit;
+import org.mockbukkit.mockbukkit.inventory.meta.ItemMetaMock;
+import org.mockbukkit.mockbukkit.inventory.meta.LeatherArmorMetaMock;
+import org.mockbukkit.mockbukkit.inventory.meta.PotionMetaMock;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
@@ -38,7 +38,9 @@ class TestItemStackUtil {
 
     @Test
     void testConsumerIsInvokedOnceIfMetaIsNotNull() {
-        ItemStack itemStack = new ItemStack(Material.AIR);
+        // The material has to be something MockBukkit supports, or else it will return null
+        // For example, Material.AIR doesn't work
+        ItemStack itemStack = new ItemStack(Material.DIAMOND_SWORD);
         itemStack.setItemMeta(new ItemMetaMock());
         ConsumerInvocationCounter<ItemMeta> counter = new ConsumerInvocationCounter<>();
         ItemStackUtil.editMeta(itemStack, counter);

@@ -2,7 +2,7 @@ package io.github.bakedlibs.dough.skins;
 
 import org.junit.jupiter.api.BeforeAll;
 
-import be.seeseemelk.mockbukkit.MockBukkit;
+import org.mockbukkit.mockbukkit.MockBukkit;
 
 class TestCustomGameProfile {
 
