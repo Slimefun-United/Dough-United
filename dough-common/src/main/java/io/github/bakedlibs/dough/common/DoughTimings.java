@@ -1,6 +1,6 @@
 package io.github.bakedlibs.dough.common;
 
-import org.apache.commons.lang3.Validate;
+import org.apache.commons.lang.Validate;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.Plugin;
 
