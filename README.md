@@ -20,11 +20,11 @@
 </p>
 <hr />
 
-This is a fork of old Dough, used by the official version of Slimefun and the Gugu Project's one.
+This is a fork of abandoned Dough, used by the official version of Slimefun and the Gugu Project's one.
 Formerly known simply as "Dough" or even earlier as "cs-corelib2", Dough United is a very powerful library aiming to help the everyday Paper plugin developer.
 It is packed to the brim with useful features and APIs to use and play around with.
 
-Dough may be more commonly known as the backbone of [Slimefun United](https://github.com/Slimefun-United/Slimefun-United) and in the past of the original [Slimefun](https://github.com/Slimefun/Slimefun4).
+Dough United may be more commonly known as the backbone of [Slimefun United](https://github.com/Slimefun-United/Slimefun-United) and in the past of the original [Slimefun](https://github.com/Slimefun/Slimefun4).
 
 ## :page_facing_up: Table of contents
 1. [Getting Started](#mag-getting-started)
@@ -35,16 +35,16 @@ Dough may be more commonly known as the backbone of [Slimefun United](https://gi
 3. [Discord server](#headphones-discord-server)
 
 ## :mag: Getting Started
-Dough is hosted on maven-central (OSS Sonatype) for easy access.
+Dough United is hosted on Maven Central (OSS Sonatype) for easy access.
 Furthermore, it consists of multiple different submodules.
 
 If you want to utilise the entirety of dough, use the artifact `dough-api`.<br>
 Otherwise replace `dough-api` in the following examples with whatever module you want to import. Note that
 some modules have dependencies on other modules, all modules require `dough-common` as an example.
 
-### Adding dough via gradle
-Dough can easily be included in gradle using mavenCentral.<br />
-Simply replace `[DOUGH VERSION]` with the most up to date version of dough:
+### Adding Dough United via gradle
+Dough can easily be included in Gradle using Maven Central.<br />
+Simply replace `[DOUGH VERSION]` with the most up-to-date version of Dough United:
 ![Maven Central](https://img.shields.io/maven-central/v/io.github.baked-libs/dough?label=latest%20version)
 
 ```gradle
@@ -53,7 +53,7 @@ repositories {
 }
 
 dependencies {
-	implementation 'io.github.baked-libs:dough-api:[DOUGH VERSION]'
+	implementation 'io.github.slimefun-united:dough-api:[DOUGH VERSION]'
 }
 ```
 
@@ -64,7 +64,7 @@ plugins {
 }
 
 shadowJar {
-   relocate "io.github.bakedlibs.dough", "[YOUR PACKAGE].dough"
+   relocate "io.github.slimefun-united.dough", "[YOUR PACKAGE].dough"
 }
 ```
 

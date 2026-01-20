@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.slimefun-united</groupId>
-    <artifactId>dough-united</artifactId>
+    <artifactId>dough</artifactId>
     <version>${revision}</version>
 
     <packaging>pom</packaging>
@@ -55,6 +56,17 @@
             <url>https://github.com/womzil</url>
         </developer>
     </developers>
+
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <url>https://central.sonatype.com/publish</url>
+        </repository>
+        <snapshotRepository>
+            <id>central</id>
+            <url>https://central.sonatype.com/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <modules>
         <!-- Shared base modules -->
@@ -123,26 +135,6 @@
                                 </goals>
                             </execution>
                         </executions>
-                    </plugin>
-
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-release-plugin</artifactId>
-                        <version>3.3.1</version>
-
-                        <configuration>
-                            <autoVersionSubmodules>true</autoVersionSubmodules>
-                            <goals>deploy</goals>
-                        </configuration>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.sonatype.central</groupId>
-                        <artifactId>central-publishing-maven-plugin</artifactId>
-                        <version>0.9.0</version>
-                        <extensions>true</extensions>
-                        <configuration>
-                            <publishingServerId>central</publishingServerId>
-                        </configuration>
                     </plugin>
                 </plugins>
             </build>
@@ -226,6 +218,38 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                        <configuration>
+                            <gpgArguments>
+                                <arg>--batch</arg>
+                                <arg>--pinentry-mode</arg>
+                                <arg>loopback</arg>
+                            </gpgArguments>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.9.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                </configuration>
             </plugin>
         </plugins>
     </build>

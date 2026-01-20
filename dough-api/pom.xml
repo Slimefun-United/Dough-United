@@ -6,7 +6,7 @@
 
     <parent>
         <groupId>io.github.slimefun-united</groupId>
-        <artifactId>dough-united</artifactId>
+        <artifactId>dough</artifactId>
         <version>${revision}</version>
     </parent>
 
