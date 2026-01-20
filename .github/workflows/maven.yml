@@ -42,9 +42,8 @@ jobs:
 
     - name: Trust GPG key
       run: |
-        KEYGRIP=$(gpg --list-secret-keys --with-keygrip | grep Keygrip | awk '{print $3}')
+        KEYGRIP=$(gpg --list-secret-keys --with-keygrip | awk '/Keygrip/ { print $3; exit }')
         echo "$KEYGRIP:6:" | gpg --import-ownertrust
-
 
     - name: Build with Maven
       run: mvn package --file pom.xml
