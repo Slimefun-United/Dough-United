@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>io.github.baked-libs</groupId>
-        <artifactId>dough</artifactId>
+        <groupId>io.github.slimefun-united</groupId>
+        <artifactId>dough-united</artifactId>
         <version>${revision}</version>
     </parent>
 
@@ -15,7 +15,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>io.github.baked-libs</groupId>
+            <groupId>io.github.slimefun-united</groupId>
             <artifactId>dough-common</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>

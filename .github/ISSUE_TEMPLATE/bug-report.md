@@ -11,18 +11,18 @@ assignees: ''
 <!-- A clear and detailed description of what exactly the Issue consists of. -->
 
 ## Steps to reproduce the Issue (Required)
-<!-- Youtube Videos and Screenshots are recommended! -->
+<!-- YouTube videos and screenshots are recommended! -->
 
 ## Expected behavior (Required)
 <!-- What did you expect to happen? -->
 
 ## Server Log / Error Report
-<!-- Take a look at your Server Log and please provide any stacktraces you can find via https://pastebin.com/ -->
-<!-- If you wanna be extra safe, post your full latest.log via pastebin! -->
+<!-- Take a look at your Server Log and please provide any stacktrace you can find via https://pastebin.com/ -->
+<!-- If you want to be extra safe, post your full latest.log via pastebin! -->
 <!-- We may discard your Issue if you just post it here, as it's unreadable for us. Please use Pastebin! -->
 
 ## Server specs (Required)
-<!-- We absolutely need to know what Server Sofware you are running -->
+<!-- We absolutely need to know what server software you are running -->
 <!-- Is it CraftBukkit, Spigot, Paper or something else? -->
 
  - Server Software:

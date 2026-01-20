@@ -11,3 +11,4 @@
 dependency-reduced-pom.xml
 publish.bat
 .ci-friendly-pom.xml
+settings.xml

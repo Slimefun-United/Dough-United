@@ -4,7 +4,7 @@
                       http://maven.apache.org/xsd/settings-1.0.0.xsd">
     <servers>
         <server>
-            <id>gugu-maven-repo</id>
+            <id>central</id>
             <username>${env.MAVEN_ACCOUNT}</username>
             <password>${env.MAVEN_PASSWORD}</password>
         </server>

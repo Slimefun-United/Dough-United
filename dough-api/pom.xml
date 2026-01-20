@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>io.github.baked-libs</groupId>
-        <artifactId>dough</artifactId>
+        <groupId>io.github.slimefun-united</groupId>
+        <artifactId>dough-united</artifactId>
         <version>${revision}</version>
     </parent>
 
@@ -179,63 +179,63 @@
 
     <dependencies>
         <dependency>
-            <groupId>io.github.baked-libs</groupId>
+            <groupId>io.github.slimefun-united</groupId>
             <artifactId>dough-common</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.github.baked-libs</groupId>
+            <groupId>io.github.slimefun-united</groupId>
             <artifactId>dough-reflection</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>io.github.baked-libs</groupId>
+            <groupId>io.github.slimefun-united</groupId>
             <artifactId>dough-config</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.github.baked-libs</groupId>
+            <groupId>io.github.slimefun-united</groupId>
             <artifactId>dough-chat</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.github.baked-libs</groupId>
+            <groupId>io.github.slimefun-united</groupId>
             <artifactId>dough-data</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.github.baked-libs</groupId>
+            <groupId>io.github.slimefun-united</groupId>
             <artifactId>dough-skins</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.github.baked-libs</groupId>
+            <groupId>io.github.slimefun-united</groupId>
             <artifactId>dough-items</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.github.baked-libs</groupId>
+            <groupId>io.github.slimefun-united</groupId>
             <artifactId>dough-inventories</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.github.baked-libs</groupId>
+            <groupId>io.github.slimefun-united</groupId>
             <artifactId>dough-protection</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.github.baked-libs</groupId>
+            <groupId>io.github.slimefun-united</groupId>
             <artifactId>dough-recipes</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.github.baked-libs</groupId>
+            <groupId>io.github.slimefun-united</groupId>
             <artifactId>dough-updater</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.github.baked-libs</groupId>
+            <groupId>io.github.slimefun-united</groupId>
             <artifactId>dough-scheduling</artifactId>
             <version>${project.version}</version>
         </dependency>

@@ -11,6 +11,6 @@ jobs:
     steps:
       - uses: actions/delete-package-versions@v4
         with:
-          package-name: 'io.github.baked-libs.dough'
+          package-name: 'io.github.slimefun-united.dough-united'
           package-type: 'maven'
           min-versions-to-keep: 2
