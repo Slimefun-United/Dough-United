@@ -10,6 +10,7 @@
         <version>${revision}</version>
     </parent>
 
+    <name>Dough United chat</name>
     <artifactId>dough-chat</artifactId>
     <packaging>jar</packaging>
 

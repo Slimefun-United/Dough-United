@@ -10,6 +10,7 @@
         <version>${revision}</version>
     </parent>
 
+    <name>Dough United updater</name>
     <artifactId>dough-updater</artifactId>
     <packaging>jar</packaging>
 

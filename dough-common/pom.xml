@@ -10,6 +10,7 @@
         <version>${revision}</version>
     </parent>
 
+    <name>Dough United common</name>
     <artifactId>dough-common</artifactId>
     <packaging>jar</packaging>
 
