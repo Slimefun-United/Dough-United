@@ -32,9 +32,9 @@
         <sonar.log.level>DEBUG</sonar.log.level>
         <sonar.coverage.jacoco.xmlReportPaths>target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
 
-        <!-- Update dough here and all modules will have this version -->
+        <!-- Update Dough United here and all modules will have this version -->
         <!-- No need to update all of them -->
-        <revision>1.4</revision>
+        <revision>1.4-SNAPSHOT</revision>
     </properties>
 
     <issueManagement>
