@@ -10,7 +10,7 @@
         <version>${revision}</version>
     </parent>
 
-    <name>Dough United items</name>
+    <name>Dough United Items</name>
     <artifactId>dough-items</artifactId>
     <packaging>jar</packaging>
 

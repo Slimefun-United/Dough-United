@@ -10,7 +10,7 @@
         <version>${revision}</version>
     </parent>
 
-    <name>Dough United config</name>
+    <name>Dough United Config</name>
     <artifactId>dough-config</artifactId>
     <packaging>jar</packaging>
 

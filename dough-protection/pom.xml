@@ -10,7 +10,7 @@
         <version>${revision}</version>
     </parent>
 
-    <name>Dough United protection</name>
+    <name>Dough United Protection</name>
     <artifactId>dough-protection</artifactId>
     <packaging>jar</packaging>
 

@@ -8,14 +8,17 @@
     <a href="https://javadoc.io/doc/io.github.slimefun-united/dough-api">
 	<img alt="javadocs" src="https://javadoc.io/badge2/io.github.slimefun-united/dough-api/javadoc.svg" />
     </a>
-    <a href="https://search.maven.org/search?q=slimefun-united">
-        <img alt="Maven Central" src="https://img.shields.io/maven-central/v/io.slimefun-united/dough-united?color=1074ad&logo=apache-maven" />
-    </a>
     <a href="https://sonarcloud.io/project/overview?id=slimefun-united_dough-united">
         <img alt="Code Coverage" src="https://sonarcloud.io/api/project_badges/measure?project=slimefun-united_dough-united&metric=coverage" />
     </a>
     <a href="https://sonarcloud.io/project/overview?id=slimefun-united_dough-united">
         <img alt="Maintainability" src="https://sonarcloud.io/api/project_badges/measure?project=slimefun-united_dough-united&metric=sqale_rating" />
+    </a>
+    <a href="https://search.maven.org/search?q=slimefun-united">
+        <img alt="Maven Central" src="https://img.shields.io/maven-central/v/io.slimefun-united/dough-united?color=1074ad&logo=apache-maven" />
+    </a>
+    <a href="https://jitpack.io/#Slimefun-United/Dough-United">
+        <img alt="JitPack" src="https://jitpack.io/v/Slimefun-United/Dough-United.svg" />
     </a>
 </p>
 <hr />

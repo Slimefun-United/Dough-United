@@ -1,4 +1,5 @@
-name: Auto Tag "dev" branch to create a JitPack snapshot
+# We need this GitHub action to create a JitPack snapshot
+name: Auto Tag "dev" branch
 
 on:
   push:
@@ -17,9 +18,13 @@ jobs:
         with:
           fetch-depth: 0  # required to create tags
 
+      - name: Get Maven project version
+        id: maven_version
+        run: echo "VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_OUTPUT
+
       - name: Create tag
         run: |
-          TAG="dev-$(git rev-parse --short HEAD)"
+          TAG="${{ steps.maven_version.outputs.VERSION }}-$(git rev-parse --short HEAD)"
           echo "Tagging with $TAG"
           git tag "$TAG"
           git push origin "$TAG"
