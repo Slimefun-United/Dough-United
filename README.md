@@ -20,11 +20,12 @@
 </p>
 <hr />
 
-This is a fork of abandoned Dough, used by the official version of Slimefun and the Gugu Project's one.
-Formerly known simply as "Dough" or even earlier as "cs-corelib2", Dough United is a very powerful library aiming to help the everyday Paper plugin developer.
+Dough United is a modern continuation of abandoned dough, which was used by the official version of Slimefun and still is used by the Gugu Project's one.
+Formerly known simply as "dough" or even earlier as "cs-corelib2", Dough United is a very powerful library aiming to help the everyday Spigot/Paper plugin developer.
 It is packed to the brim with useful features and APIs to use and play around with.
+It also serves as a drop-in replacement for previous versions of dough (both 1.2 and 1.3!). 
 
-Dough United may be more commonly known as the backbone of [Slimefun United](https://github.com/Slimefun-United/Slimefun-United) and in the past of the original [Slimefun](https://github.com/Slimefun/Slimefun4).
+Dough United may be more commonly known as the backbone of [Slimefun United](https://github.com/Slimefun-United/Slimefun-United), just like in the past dough was of the original [Slimefun](https://github.com/Slimefun/Slimefun4).
 
 ## :page_facing_up: Table of contents
 1. [Getting Started](#mag-getting-started)
@@ -42,14 +43,28 @@ If you want to utilise the entirety of dough, use the artifact `dough-api`.<br>
 Otherwise replace `dough-api` in the following examples with whatever module you want to import. Note that
 some modules have dependencies on other modules, all modules require `dough-common` as an example.
 
-### Adding Dough United via gradle
-Dough can easily be included in Gradle using Maven Central.<br />
+Dough United can easily be included in Gradle and Maven using Maven Central.
+If Maven Central is unavailable or a release is pending approval,
+you can use JitPack to consume the same version:
+https://jitpack.io/#<org>/<repo>/<tag>
+
+Snapshots are available only on JitPack.
+
+### Adding Dough United via Gradle
+
 Simply replace `[DOUGH VERSION]` with the most up-to-date version of Dough United:
-![Maven Central](https://img.shields.io/maven-central/v/io.github.baked-libs/dough?label=latest%20version)
+![Maven Central](https://img.shields.io/maven-central/v/io.github.slimefun-united/dough?label=latest%20version)
 
 ```gradle
 repositories {
+	/*
+	  If you want to use releases from Maven Central, add this repo.
+	*/
 	mavenCentral()
+	/*
+	  If you want to use releases or snapshots from JitPack, add this repo.
+	*/
+	maven { url 'https://jitpack.io' }
 }
 
 dependencies {
@@ -57,7 +72,7 @@ dependencies {
 }
 ```
 
-To shadow dough and relocate it:
+To shadow Dough United and relocate it:
 ```gradle
 plugins {
   id "com.github.johnrengelman.shadow" version "7.0.0"
@@ -68,12 +83,22 @@ shadowJar {
 }
 ```
 
-### Adding dough via Maven
-Dough can easily be included be added using maven-central.<br />
-Simply replace `[DOUGH VERSION]` with the most up to date version of dough:
-![Maven Central](https://img.shields.io/maven-central/v/io.github.baked-libs/dough?label=latest%20version)
+### Adding Dough United via Maven
+
+Simply replace `[DOUGH VERSION]` with the most up-to-date version of Dough United:
+![Maven Central](https://img.shields.io/maven-central/v/io.github.slimefun-united/dough?label=latest%20version)
 
 ```xml
+<!-- 
+    If you want to use releases or snapshots from JitPack, add this repo.
+-->
+<repositories>
+   <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+   </repository>
+</repositories>
+
 <dependencies>
   <dependency>
     <groupId>io.github.slimefun-united</groupId>
@@ -84,7 +109,7 @@ Simply replace `[DOUGH VERSION]` with the most up to date version of dough:
 </dependencies>
 ```
 
-To shadow dough and relocate it:
+To shadow Dough United and relocate it:
 ```xml
 <build>
   <plugins>
@@ -96,7 +121,7 @@ To shadow dough and relocate it:
       <configuration>
         <relocations>
           <relocation>
-            <pattern>io.github.bakedlibs.dough</pattern>
+            <pattern>io.github.slimefun-united.dough</pattern>
             <shadedPattern>[YOUR PACKAGE].dough</shadedPattern>
           </relocation>
         </relocations>
@@ -125,15 +150,21 @@ Note that this server is not as active at times, so response times may vary.
 
 <p align="center">
   <a href="https://discord.gg/C8M6nPyDu6">
-    <img src="https://discord.com/api/guilds/588806119544061968/widget.png?style=banner3" alt="Discord invite to Slimefun United server"/>
+    <img
+      src="https://discord.com/api/guilds/588806119544061968/widget.png?style=banner3"
+      alt="Discord invite to the Slimefun United server"
+    />
   </a>
 </p>
 
 ### Old Discord server
-If you want to check out old server and find some information there, you're welcomed to join it as well.
+If you want to check out old dough server and find some information there, you're welcomed to join it as well.
 
 <p align="center">
   <a href="https://discord.gg/c8tk8rP8Wb">
-    <img src="https://discordapp.com/api/guilds/862336191839600650/widget.png?style=banner3" alt="Discord invite to old Dough server"/>
+    <img
+      src="https://discordapp.com/api/guilds/862336191839600650/widget.png?style=banner3"
+      alt="Discord invite to the old dough server"
+    />
   </a>
 </p>
