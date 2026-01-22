@@ -39,62 +39,123 @@ Dough United may be more commonly known as the backbone of [Slimefun United](htt
 3. [Discord server](#headphones-discord-server)
 
 ## :mag: Getting Started
-Dough United is hosted on Maven Central (OSS Sonatype) for easy access.
+Releases of Dough United are hosted on Maven Central (OSS Sonatype) for easy access.
 Furthermore, it consists of multiple different submodules.
+Snapshots are available only on JitPack.
+You should use release versions whenever possible though.
 
-If you want to utilise the entirety of dough, use the artifact `dough-api`.<br>
+**Note**: JitPack requires a different artefact ID and JitPack repo!
+
+If you want to utilise the entirety of Dough United, use the artifact `dough-api`.<br>
 Otherwise replace `dough-api` in the following examples with whatever module you want to import. Note that
 some modules have dependencies on other modules, all modules require `dough-common` as an example.
 
-Dough United can easily be included in Gradle and Maven using Maven Central.
-If Maven Central is unavailable or a release is pending approval,
-you can use JitPack to consume the same version:
-https://jitpack.io/#<org>/<repo>/<tag>
+Dough United can easily be included in Gradle and Maven using Maven Central or JitPack.
 
-Snapshots are available only on JitPack.
+### Adding Dough United via Gradle (Groovy)
 
-### Adding Dough United via Gradle
-
-Simply replace `[DOUGH VERSION]` with the most up-to-date version of Dough United:
+Simply replace `[DOUGH VERSION]` with the most up-to-date version of Dough United: <br />
 ![Maven Central](https://img.shields.io/maven-central/v/io.github.slimefun-united/dough?label=latest%20version)
+[![](https://jitpack.io/v/Slimefun-United/Dough-United.svg)](https://jitpack.io/#Slimefun-United/Dough-United)
 
-```gradle
+#### Maven Central - releases
+
+```groovy
 repositories {
-	/*
-	  If you want to use releases from Maven Central, add this repo.
-	*/
-	mavenCentral()
-	/*
-	  If you want to use releases or snapshots from JitPack, add this repo.
-	*/
-	maven { url 'https://jitpack.io' }
+   mavenCentral()
 }
 
 dependencies {
-	implementation 'io.github.slimefun-united:dough-api:[DOUGH VERSION]'
+   implementation 'io.github.slimefun-united:dough-api:[DOUGH VERSION]'
+}
+```
+
+#### JitPack - snapshots
+
+```groovy
+repositories {
+   maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+   implementation 'com.github.Slimefun-United:dough-api:[DOUGH VERSION]'
 }
 ```
 
 To shadow Dough United and relocate it:
-```gradle
+```groovy
 plugins {
-  id "com.github.johnrengelman.shadow" version "7.0.0"
+   id "com.github.johnrengelman.shadow" version "7.0.0"
 }
 
 shadowJar {
-   relocate "io.github.slimefun-united.dough", "[YOUR PACKAGE].dough"
+   relocate "io.github.bakedlibs.dough", "[YOUR PACKAGE].dough"
+}
+```
+
+### Adding Dough United via Gradle (Kotlin)
+
+Simply replace `[DOUGH VERSION]` with the most up-to-date version of Dough United: <br />
+![Maven Central](https://img.shields.io/maven-central/v/io.github.slimefun-united/dough?label=latest%20version)
+[![](https://jitpack.io/v/Slimefun-United/Dough-United.svg)](https://jitpack.io/#Slimefun-United/Dough-United)
+
+#### Maven Central - releases
+
+```kotlin
+repositories {
+   mavenCentral()
+}
+
+dependencies {
+   implementation("io.github.slimefun-united:dough-api:[DOUGH VERSION]")
+}
+```
+
+#### JitPack - snapshots
+
+```kotlin
+repositories {
+   maven("https://jitpack.io")
+}
+
+dependencies {
+   implementation("com.github.Slimefun-United:dough-api:[DOUGH VERSION]")
+}
+```
+
+To shadow Dough United and relocate it:
+```kotlin
+plugins {
+   id("com.github.johnrengelman.shadow") version "7.0.0"
+}
+
+tasks.shadowJar {
+   relocate("io.github.bakedlibs.dough", "[YOUR PACKAGE].dough")
 }
 ```
 
 ### Adding Dough United via Maven
 
-Simply replace `[DOUGH VERSION]` with the most up-to-date version of Dough United:
+Simply replace `[DOUGH VERSION]` with the most up-to-date version of Dough United: <br />
 ![Maven Central](https://img.shields.io/maven-central/v/io.github.slimefun-united/dough?label=latest%20version)
+[![](https://jitpack.io/v/Slimefun-United/Dough-United.svg)](https://jitpack.io/#Slimefun-United/Dough-United)
+
+#### Maven Central - releases
 
 ```xml
-<!-- 
-    If you want to use releases or snapshots from JitPack, add this repo.
--->
+<dependencies>
+  <dependency>
+    <groupId>io.github.slimefun-united</groupId>
+    <artifactId>dough-api</artifactId>
+    <version>[DOUGH VERSION]</version>
+    <scope>compile</scope>
+  </dependency>
+</dependencies>
+```
+
+#### JitPack - snapshots
+
+```xml
 <repositories>
    <repository>
       <id>jitpack.io</id>
@@ -104,7 +165,7 @@ Simply replace `[DOUGH VERSION]` with the most up-to-date version of Dough Unite
 
 <dependencies>
   <dependency>
-    <groupId>io.github.slimefun-united</groupId>
+    <groupId>com.github.Slimefun-United</groupId>
     <artifactId>dough-api</artifactId>
     <version>[DOUGH VERSION]</version>
     <scope>compile</scope>
@@ -124,7 +185,7 @@ To shadow Dough United and relocate it:
       <configuration>
         <relocations>
           <relocation>
-            <pattern>io.github.slimefun-united.dough</pattern>
+            <pattern>io.github.bakedlibs.dough</pattern>
             <shadedPattern>[YOUR PACKAGE].dough</shadedPattern>
           </relocation>
         </relocations>
