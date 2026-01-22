@@ -78,7 +78,7 @@ repositories {
 }
 
 dependencies {
-   implementation 'com.github.Slimefun-United:dough-api:[DOUGH VERSION]'
+   implementation 'com.github.Slimefun-United.Dough-United:dough-api:[DOUGH VERSION]'
 }
 ```
 
@@ -119,7 +119,7 @@ repositories {
 }
 
 dependencies {
-   implementation("com.github.Slimefun-United:dough-api:[DOUGH VERSION]")
+   implementation("com.github.Slimefun-United.Dough-United:dough-api:[DOUGH VERSION]")
 }
 ```
 
@@ -165,7 +165,7 @@ Simply replace `[DOUGH VERSION]` with the most up-to-date version of Dough Unite
 
 <dependencies>
   <dependency>
-    <groupId>com.github.Slimefun-United</groupId>
+    <groupId>com.github.Slimefun-United.Dough-United</groupId>
     <artifactId>dough-api</artifactId>
     <version>[DOUGH VERSION]</version>
     <scope>compile</scope>
