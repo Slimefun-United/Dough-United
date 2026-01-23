@@ -32,11 +32,13 @@ Dough United may be more commonly known as the backbone of [Slimefun United](htt
 
 ## :page_facing_up: Table of contents
 1. [Getting Started](#mag-getting-started)
-    - [Adding dough via gradle](#adding-dough-via-gradle)
-    - [Adding dough via Maven](#adding-dough-via-maven)
+    - [Adding Dough United via Gradle (Groovy)](#adding-dough-united-via-gradle-groovy)
+    - [Adding Dough United via Gradle (Kotlin)](#adding-dough-united-via-gradle-kotlin)
+    - [Adding Dough via Maven](#adding-dough-united-via-maven)
 2. [Features & Documentation](#sparkles-features-and-documentation)
     - TODO
 3. [Discord server](#headphones-discord-server)
+    - [Old Discord server](#old-discord-server)
 
 ## :mag: Getting Started
 Releases of Dough United are hosted on Maven Central (OSS Sonatype) for easy access.
@@ -50,7 +52,7 @@ If you want to utilise the entirety of Dough United, use the artifact `dough-api
 Otherwise replace `dough-api` in the following examples with whatever module you want to import. Note that
 some modules have dependencies on other modules, all modules require `dough-common` as an example.
 
-Dough United can easily be included in Gradle and Maven using Maven Central or JitPack.
+Dough United can easily be included in Gradle ([Groove](#adding-dough-united-via-gradle-groovy) and [Kotlin](#adding-dough-united-via-gradle-kotlin)) and [Maven](#adding-dough-united-via-maven) using Maven Central or JitPack.
 
 ### Adding Dough United via Gradle (Groovy)
 
