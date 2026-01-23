@@ -24,7 +24,7 @@ jobs:
 
       - name: Create tag
         run: |
-          TAG="${{ steps.maven_version.outputs.VERSION }}-${{ github.run_number }}-$(git rev-parse --short HEAD)"
+          TAG="${{ steps.maven_version.outputs.VERSION }}-${{ github.run_number }}+$(git rev-parse --short HEAD)"
           echo "Tagging with $TAG"
           git tag "$TAG"
           git push origin "$TAG"
