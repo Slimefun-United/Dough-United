@@ -8,9 +8,11 @@ on:
 jobs:
   delete-package-versions:
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
     steps:
       - uses: actions/delete-package-versions@v4
         with:
-          package-name: 'io.github.slimefun-united.dough-united'
+          package-name: 'io.github.slimefun-united.dough'
           package-type: 'maven'
           min-versions-to-keep: 2
